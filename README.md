@@ -48,7 +48,7 @@ The PHP scripts are designed to obtain the userId of specified LINE user.
 
 ### How the scripts work?
 
-When LINE user add the LINE Bot as friend, he sends a TXT message `/uid` to the LINE Bot then will get his userId info immediately.
+When LINE user adds the LINE Bot as friend, the user sends a TXT message `/uid` to the LINE Bot then will get his userId info immediately.
 
 ## Nagios
 
