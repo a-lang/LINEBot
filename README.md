@@ -32,7 +32,7 @@ The PHP scripts are designed to obtain the userId of specified LINE user.
 > NOTE: 
 >
 > - The userId is different from LINE ID found on LINE. 
-> - To send a LINE message to someone's LINE account, the info of his userId is MUST to the LINE Messaging API.
+> - To send a LINE message to someone's LINE account, the userId info of the recipient is MUST to the LINE Messaging API.
 
 ### What's the userId?
 
