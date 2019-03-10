@@ -1,0 +1,51 @@
+###### contacts.cfg
+## Alert with LINE
+#
+define contact{
+        contact_name                    alang-line
+        use                             generic-contact-line
+        alias                           Alang's LINE uid
+        pager                           Ua683d0cdfc45a3c
+        }
+
+define contact{
+        contact_name                    alang-line-group
+        use                             generic-contact-line
+        alias                           Alang's LINE Group gid
+        pager                           Cd3ac82cda6e3cd21b3
+        }
+
+		
+		
+###### commands.cfg
+## for LINE API
+# 'notify-host-by-line' command definition
+define command{
+        command_name    notify-host-by-line
+        command_line    $USER5$/sendLINE.sh -t "[Nagios] $NOTIFICATIONTYPE$ Host Alert: $HOSTNAME$ is $HOSTSTATE$ " -u $CONTACTPAGER$
+        }
+
+# 'notify-service-by-line' command definition
+define command{
+        command_name    notify-service-by-line
+        command_line    $USER5$/sendLINE.sh -t "[Nagios] $NOTIFICATIONTYPE$ Service Alert: $HOSTALIAS$/$SERVICEDESC$ is $SERVICESTATE$ " -u $CONTACTPAGER$
+        }
+
+		
+		
+		
+
+###### templates.cfg
+define contact{
+        name                            generic-contact-line
+        service_notification_period     24x7
+        host_notification_period        24x7
+        service_notification_options    w,u,c,r,f,s
+        host_notification_options       d,u,r,f,s
+        service_notification_commands   notify-service-by-line
+        host_notification_commands      notify-host-by-line
+        register                        0
+        }
+
+
+
