@@ -1,8 +1,8 @@
 # LINE: Channel Access Token
-CHANNEL_ACCESS_TOKEN = "/BLKya8OUMM4nSYClmUOcAgFiZSb5zbvgX2BXCn9qaDHdJIcyCDC2gDucLy0EC5SJIO0GhEWt9RQYa5kQxhyvJUuERabjE9671fBTtBF8d0teYGteNjgKrmHhWkFDHBwSMkfvBNjSQd84j7BA2aAJQdB04t89/1O/w1cDnyilFU="
+CHANNEL_ACCESS_TOKEN = "ChannelAccessToken"
 
 # Google Storage: Bucket 
 GOOGLE_APPLICATION_CREDENTIALS = "my-cloud-1031-a9d3d5a03635.json"
-BUCKET_ID = "alangpublic"
+BUCKET_ID = "your-bucket-id"
 BUCKET_DIR = "LineBot/"
 
